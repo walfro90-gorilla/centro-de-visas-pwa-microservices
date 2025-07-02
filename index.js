@@ -15,7 +15,7 @@ app.get('/api/pdf/lead/:id', async (req, res) => {
     // Obtiene el parámetro 'id' de la URL
     const { id } = req.params;
     // Construye la URL del reporte del lead en el frontend
-    const url = `https://v0-centro-de-visas.vercel.app/crm/leads/${id}/reporte-pdf`;
+    const url = `https://v0-centro-de-visas.vercel.app/crm/leads/${id}/reporte-pdf?pdf=1`;
 
     // Lanza una instancia de navegador headless con Puppeteer
     const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
