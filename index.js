@@ -7,7 +7,7 @@ app.use(cors());
 
 app.get('/api/pdf/lead/:id', async (req, res) => {
     const { id } = req.params;
-    const url = `https://v0-centro-de-visas.vercel.app/crm/leads/${id}/reporte-pdf`;
+    const url = `https://v0-centro-de-visas.vercel.app/crm/leads/${id}`;
 
     const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
